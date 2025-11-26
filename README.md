@@ -15,3 +15,28 @@ Before Running Terraform, Make sure you have the following prerequisites ready:
 - ➡️ Terraform v1.3+ (recommended)
 - ➡️ AWS CLI configured with proper IAM credentials
 - ➡️ Public and Private Key
+
+####  Clone the repo:
+   ```bash
+   git clone https://github.com/xrootms/terraform-jenkins-setup.git
+   cd terraform-aws-vpc-ec2
+   ```
+
+#### 2. Copy and edit variables: (Update variable values as needed — VPC, CIDR, public key, region, etc.)
+   ```bash
+   cp terraform.tfvars.example terraform.tfvars
+   ```
+
+#### 3. Initialize Terraform:
+   ```bash
+   terraform init
+   ```
+
+#### 4. Plan and Apply:
+   ```bash
+   terraform plan
+   terraform apply
+   ```
+
+#### 5. Get ssh connection for EC2:
+
