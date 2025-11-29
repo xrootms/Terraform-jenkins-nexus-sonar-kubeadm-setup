@@ -24,24 +24,24 @@ Before Running This project, Make sure you have the following prerequisites read
 
 ### Local / Developer Requirements
 
-➡️ Terraform v1.3+ installed
-➡️ AWS CLI configured with IAM user credentials (Access Key & Secret Key)
-➡️ Public and Private Key
-➡️ Git installed to clone the repository
-➡️ Basic IAM permissions for Terraform (EC2, VPC, IAM, S3, CloudWatch)
+- ➡️ Terraform v1.3+ installed
+- ➡️ AWS CLI configured with IAM user credentials (Access Key & Secret Key)
+- ➡️ Public and Private Key
+- ➡️ Git installed to clone the repository
+- ➡️ Basic IAM permissions for Terraform (EC2, VPC, IAM, S3, CloudWatch)
 
 ### Jenkins Requirements
 
-➡️ Jenkins installed on a server (EC2, VM etc.)
-➡️ Required Jenkins plugins: AWS Credentials
-➡️ Jenkins credentials configured for: Github, AWS kyes and terraform.tfvars file
-➡️ Checkov (via pip) Installed 
-➡️ Terraform v1.3+ installed
+- ➡️ Jenkins installed on a server (EC2, VM etc.)
+- ➡️ Required Jenkins plugins: AWS Credentials
+- ➡️ Jenkins credentials configured for: Github, AWS kyes and terraform.tfvars file
+- ➡️ Checkov (via pip) Installed 
+- ➡️ Terraform v1.3+ installed
 
 ### Terraform Backend (Optional but recommended)
 
-➡️ S3 bucket for remote backend state
-➡️ DynamoDB table for state locking
+- ➡️ S3 bucket for remote backend state
+- ➡️ DynamoDB table for state locking
 
 
 ### Create a Jenkins Pipeline Job*
