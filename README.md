@@ -1,23 +1,23 @@
 # Automated Terraform CI/CD Pipeline with Checkov Security Scanning (Jenkins)
-This project focuses on building a fully automated **Infrastructure-as-Code** deployment pipeline using Terraform, integrated with Jenkins CI/CD and Checkov security scanning.
+This project focuses on building a fully automated `Infrastructure-as-Code` deployment pipeline using Terraform, integrated with `Jenkins CI/CD` and `Checkov` security scanning.
 
 ## Overview
 **IaC (Terraform)** 
 The pipeline provisions a complete AWS infrastructure stack that includes:
 
-- ➡️ A custom VPC with public subnets, Internet Gateway, and route tables
-- ➡️ Security Groups for SonarQube, Nexus, and Kubernetes cluster nodes
-- ➡️ EC2 instances for SonarQube, Nexus Repository Manager, and Kubeadm master/worker nodes (with User Data installation script)
+- ➡️ A custom `VPC` with public subnets, Internet Gateway, and route tables
+- ➡️ `Security Groups` for SonarQube, Nexus, and Kubernetes cluster nodes
+- ➡️ EC2 instances for `SonarQube`, `Nexus Repository Manager`, and `Kubeadm master/worker nodes` (with User Data installation script)
 
 **Pipeline (Jenkins)**
 The Jenkins pipeline automates the following stages:
 
-- 1️⃣ Git Checkout - Clones the Terraform repository from GitHub using Jenkins credentials
-- 2️⃣ Load tfvars - Loads environment-specific Terraform variable files securely from Jenkins credentials for use in the pipeline.
-- 3️⃣ Terraform Init - Initializes Terraform modules and providers for deployment.
-- 4️⃣ Checkov Security Scan  - Runs Checkov to detect Terraform misconfigurations and publishes a report.
-- 5️⃣ Terraform Plan - Generates a Terraform execution plan to preview infrastructure changes.
-- 6️⃣ Terraform Apply - Applies the Terraform plan to provision or update cloud infrastructure.
+- 1️⃣ `Git Checkout` - Clones the Terraform repository from GitHub using Jenkins credentials
+- 2️⃣ `Load tfvars` - Loads environment-specific Terraform variable files securely from Jenkins credentials for use in the pipeline.
+- 3️⃣ `Terraform Init` - Initializes Terraform modules and providers for deployment.
+- 4️⃣ `Checkov Security Scan`  - Runs Checkov to detect Terraform misconfigurations and publishes a report.
+- 5️⃣ `Terraform Plan` - Generates a Terraform execution plan to preview infrastructure changes.
+- 6️⃣ `Terraform Apply` - Applies the Terraform plan to provision or update cloud infrastructure.
 
 ## Prerequisites
 Before Running This project, Make sure you have the following prerequisites ready:
@@ -27,8 +27,6 @@ Before Running This project, Make sure you have the following prerequisites read
 - ➡️ Terraform v1.3+ installed
 - ➡️ AWS CLI configured with IAM user credentials (Access Key & Secret Key)
 - ➡️ Public and Private Key
-- ➡️ Git installed to clone the repository
-- ➡️ Basic IAM permissions for Terraform (EC2, VPC, IAM, S3, CloudWatch)
 
 ### Jenkins Requirements
 
@@ -37,12 +35,6 @@ Before Running This project, Make sure you have the following prerequisites read
 - ➡️ Jenkins credentials configured for: Github, AWS kyes and terraform.tfvars file
 - ➡️ Checkov (via pip) Installed 
 - ➡️ Terraform v1.3+ installed
-
-### Terraform Backend (Optional but recommended)
-
-- ➡️ S3 bucket for remote backend state
-- ➡️ DynamoDB table for state locking
-
 
 ### Create a Jenkins Pipeline Job*
 
