@@ -5,7 +5,7 @@ This project focuses on building a fully automated `Infrastructure-as-Code` depl
 **IaC (Terraform)** 
 The pipeline provisions a complete AWS infrastructure stack that includes:
 
-- ➡️ A custom `VPC` with public subnets, Internet Gateway, and route tables
+- ➡️ A custom `VPC` with `public subnets`, `Internet Gateway`, and `route tables`
 - ➡️ `Security Groups` for SonarQube, Nexus, and Kubernetes cluster nodes
 - ➡️ EC2 instances for `SonarQube`, `Nexus Repository Manager`, and `Kubeadm master/worker nodes` (with User Data installation script)
 
@@ -23,8 +23,7 @@ The Jenkins pipeline automates the following stages:
 Before Running This project, Make sure you have the following prerequisites ready:
 
 ### Local / Developer Requirements
-
-- ➡️ Terraform v1.3+ installed
+- ➡️ Terraform v1.11.4 installed
 - ➡️ AWS CLI configured with IAM user credentials (Access Key & Secret Key)
 - ➡️ Public and Private Key
 
@@ -32,15 +31,15 @@ Before Running This project, Make sure you have the following prerequisites read
 
 - ➡️ Jenkins installed on a server (EC2, VM etc.)
 - ➡️ Required Jenkins plugins: AWS Credentials
-- ➡️ Jenkins credentials configured for: Github, AWS kyes and terraform.tfvars file
+- ➡️ Jenkins credentials configured for: Github Repo., AWS Access Key & Secret Key and *.tfvars file
 - ➡️ Checkov (via pip) Installed 
-- ➡️ Terraform v1.3+ installed
+- ➡️ Terraform v1.11.4 installed
 
 ### Create a Jenkins Pipeline Job*
 
 **Path:** `Jenkins > New Item`
 
-1. Name: `full-stack`
+1. Name: `Infra`
 2. Type: `Pipeline`
 3. Discard Old Builds → Keep for 100 days, max 2 builds
 4. Add pipeline script:
